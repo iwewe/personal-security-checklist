@@ -1,0 +1,168 @@
+# Personal Security Checklist - Bahasa Indonesia
+# File ini adalah contoh translasi untuk demonstrasi fitur multi-language
+#
+# CATATAN: Ini adalah sample/template - untuk produksi, semua sections perlu diterjemahkan
+#
+# Struktur: Sama dengan file asli (personal-security-checklist.yml)
+# Format: YAML dengan sections, checklist items, priorities, dll
+
+- title: Autentikasi
+  slug: authentication
+  description: Mengamankan kredensial login akun online Anda
+  icon: password
+  color: yellow
+  intro: >-
+    Sebagian besar kebocoran data yang dilaporkan disebabkan oleh penggunaan password yang lemah, default, atau dicuri
+    (menurut [laporan Verizon ini](http://www.verizonenterprise.com/resources/reports/rp_dbir-2016-executive-summary_xg_en.pdf)).
+    Gunakan password yang panjang, kuat, dan unik, kelola dalam password manager yang aman, aktifkan
+    autentikasi 2 faktor, pantau kebocoran data, dan berhati-hati saat login ke akun Anda.
+  checklist:
+  - point: Gunakan Password yang Kuat
+    priority: Essential
+    details: >-
+      Jika password Anda terlalu pendek, atau mengandung kata-kata kamus, tempat, atau nama - maka dapat dengan mudah
+      dipecahkan melalui brute force, atau ditebak oleh seseorang. Cara termudah untuk membuat password yang kuat adalah dengan
+      membuatnya panjang (12+ karakter) - pertimbangkan menggunakan 'passphrase', yang terdiri dari banyak kata. Alternatifnya,
+      gunakan password generator untuk membuat password acak yang panjang dan kuat. Coba mainkan
+      [HowSecureIsMyPassword.net](https://howsecureismypassword.net), untuk mendapatkan gambaran seberapa cepat password umum
+      dapat dipecahkan. Baca lebih lanjut tentang membuat password yang kuat:
+      [securityinabox.org](https://securityinabox.org/en/passwords/passwords-and-2fa/)
+
+  - point: Jangan Gunakan Ulang Password
+    priority: Essential
+    details: >-
+      Jika seseorang menggunakan ulang password, dan salah satu situs tempat mereka memiliki akun mengalami kebocoran, maka
+      penjahat dapat dengan mudah mendapatkan akses tidak sah ke akun mereka yang lain. Ini biasanya dilakukan melalui
+      permintaan login otomatis skala besar, dan ini disebut Credential Stuffing. Sayangnya ini sangat umum terjadi,
+      tetapi mudah dilindungi - gunakan password yang berbeda untuk setiap akun online Anda
+
+  - point: Gunakan Password Manager yang Aman
+    priority: Essential
+    details: >-
+      Bagi kebanyakan orang akan hampir mustahil untuk mengingat ratusan password yang kuat dan unik.
+      Password manager adalah aplikasi yang menghasilkan, menyimpan, dan mengisi otomatis kredensial login Anda.
+      Semua password Anda akan dienkripsi dengan 1 master password (yang harus Anda ingat, dan harus sangat kuat).
+      Sebagian besar password manager memiliki ekstensi browser dan aplikasi mobile, jadi perangkat apa pun yang Anda gunakan,
+      password Anda dapat diisi otomatis. Yang bagus dan serba bisa adalah
+      [Bitwarden](https://awesome-privacy.xyz/essentials/password-managers/bitwarden), atau lihat
+      [Password Manager yang Direkomendasikan](https://awesome-privacy.xyz/essentials/password-managers)
+
+  - point: Hindari Berbagi Password
+    priority: Essential
+    details: >-
+      Meskipun mungkin ada kalanya Anda perlu berbagi akses ke akun dengan orang lain, Anda umumnya harus
+      menghindari melakukan ini karena memudahkan akun untuk dikompromikan. Jika Anda benar-benar perlu berbagi
+      password misalnya saat bekerja dalam tim dengan akun bersama, ini harus dilakukan melalui fitur yang
+      dibangun dalam password manager.
+
+  - point: Aktifkan Autentikasi 2 Faktor
+    priority: Essential
+    details: >-
+      2FA adalah di mana Anda harus memberikan sesuatu yang Anda ketahui (password) dan sesuatu yang Anda miliki (seperti
+      kode di ponsel Anda) untuk login. Ini berarti bahwa jika ada yang mendapatkan password Anda (misalnya melalui phishing,
+      malware atau kebocoran data), mereka tidak akan dapat login ke akun Anda. Mudah untuk memulai,
+      unduh [aplikasi authenticator](https://github.com/Lissy93/awesome-privacy#2-factor-authentication)
+      ke ponsel Anda, lalu buka pengaturan keamanan akun Anda dan ikuti langkah-langkah untuk mengaktifkan 2FA. Lain kali
+      Anda login di perangkat baru, Anda akan diminta kode yang ditampilkan di aplikasi di ponsel Anda
+      (berfungsi tanpa internet, dan kode biasanya berubah setiap 30 detik)
+
+  - point: Simpan Kode Backup dengan Aman
+    priority: Essential
+    details: >-
+      Ketika Anda mengaktifkan autentikasi multi-faktor, Anda biasanya akan diberikan beberapa kode yang dapat Anda gunakan jika
+      metode 2FA Anda hilang, rusak atau tidak tersedia. Simpan kode ini di tempat yang aman untuk mencegah kehilangan atau
+      akses tidak sah. Anda harus menyimpan ini di atas kertas atau di tempat yang aman di disk (misalnya di penyimpanan offline
+      atau di file/drive terenkripsi). Jangan simpan ini di Password Manager Anda karena sumber 2FA dan password
+      harus disimpan secara terpisah.
+
+  - point: Daftar untuk Alert Kebocoran Data
+    priority: Optional
+    details: >-
+      Setelah website mengalami kebocoran data yang signifikan, data yang bocor sering berakhir di internet. Ada
+      beberapa situs yang mengumpulkan catatan yang bocor ini, dan memungkinkan Anda mencari alamat email Anda untuk memeriksa
+      apakah Anda ada dalam daftar mereka. [Firefox Monitor](https://monitor.firefox.com), [Have I been pwned](https://haveibeenpwned.com)
+      dan [DeHashed](https://dehashed.com) memungkinkan Anda untuk mendaftar pemantauan, di mana mereka akan memberi tahu Anda jika alamat
+      email Anda muncul dalam set data baru. Berguna untuk mengetahui sesegera mungkin ketika ini terjadi, sehingga
+      Anda dapat mengubah password untuk akun yang terpengaruh.
+
+  - point: Lindungi Password/ PIN Anda
+    priority: Optional
+    details: >-
+      Saat mengetik password Anda di tempat umum, pastikan Anda tidak berada di garis pandang langsung kamera CCTV dan
+      tidak ada yang dapat melihat dari belakang bahu Anda. Tutupi password atau kode pin Anda saat mengetik, dan jangan
+      mengungkapkan password teks biasa di layar
+
+  - point: Perbarui Password Kritis Secara Berkala
+    priority: Optional
+    details: >-
+      Kebocoran dan pelanggaran database adalah hal yang umum, dan kemungkinan beberapa password Anda sudah ada di suatu tempat
+      online. Sesekali memperbarui password akun yang kritis untuk keamanan dapat membantu mengurangi ini. Tetapi dengan syarat
+      bahwa semua password Anda panjang, kuat dan unik, tidak perlu melakukan ini terlalu sering - setahun sekali sudah cukup.
+
+- title: Browsing Web
+  slug: browsing
+  description: Rekomendasi untuk menjelajah web dengan aman
+  icon: browser
+  color: amber
+  intro: >-
+    Sebagian besar situs web saat ini menggunakan beberapa bentuk tracking, baik untuk analitik, iklan bertarget,
+    atau alasan lainnya. Banyak dari ini tidak berbahaya, tetapi beberapa dapat digunakan untuk membuat profil
+    tentang Anda berdasarkan aktivitas online Anda. Ada beberapa langkah yang dapat Anda ambil untuk menjaga
+    privasi Anda saat browsing.
+  checklist:
+  - point: Gunakan Browser yang Menghormati Privasi
+    priority: Essential
+    details: >-
+      [Firefox](https://www.mozilla.org/firefox) dan [Brave](https://brave.com) adalah browser populer yang menghormati privasi.
+      [LibreWolf](https://librewolf-community.gitlab.io) adalah fork Firefox yang telah di-hardening untuk privasi.
+      [Tor Browser](https://www.torproject.org) memberikan anonimitas terbaik. Hindari Chrome dan browser berbasis Chromium lainnya,
+      karena mereka mengumpulkan banyak data telemetri.
+
+  - point: Gunakan Ekstensi Privacy
+    priority: Essential
+    details: >-
+      Ekstensi browser dapat membantu memblokir tracker, iklan, dan elemen lain yang menginvasi privasi. Beberapa yang bagus termasuk
+      [uBlock Origin](https://github.com/gorhill/uBlock) (ad blocker),
+      [Privacy Badger](https://privacybadger.org) (tracker blocker), dan
+      [HTTPS Everywhere](https://www.eff.org/https-everywhere) (memaksa koneksi HTTPS).
+
+  - point: Gunakan Search Engine yang Menghormati Privasi
+    priority: Essential
+    details: >-
+      Google melacak dan menyimpan semua pencarian Anda. Gunakan mesin pencari yang menghormati privasi seperti
+      [DuckDuckGo](https://duckduckgo.com), [Startpage](https://www.startpage.com), atau
+      [Searx](https://searx.github.io/searx).
+
+  - point: Blokir Cookies Pihak Ketiga
+    priority: Essential
+    details: >-
+      Cookies pihak ketiga digunakan untuk melacak Anda di berbagai situs web. Sebagian besar browser modern memungkinkan Anda
+      untuk memblokir cookies pihak ketiga di pengaturan privasi. Anda juga dapat menggunakan ekstensi seperti
+      [Cookie AutoDelete](https://github.com/Cookie-AutoDelete/Cookie-AutoDelete) untuk menghapus cookies secara otomatis.
+
+# CATATAN: Tambahkan sections lainnya di sini untuk translasi lengkap
+# - Web Browsing
+# - Email
+# - Messaging
+# - Social Media
+# - Networking
+# - Mobile
+# - Computer
+# - Smart Home
+# - Finance
+# - Human Aspect
+# - Physical Security
+
+# Template untuk section tambahan:
+# - title: [Judul Section]
+#   slug: [slug-url]
+#   description: [Deskripsi singkat]
+#   icon: [nama-icon]
+#   color: [warna]
+#   intro: >-
+#     [Paragraf pengantar section]
+#   checklist:
+#   - point: [Judul checklist item]
+#     priority: [Essential/Optional/Advanced]
+#     details: >-
+#       [Detail lengkap dalam markdown]
